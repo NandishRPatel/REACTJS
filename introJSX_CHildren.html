@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>New step towards React js</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel">
+    	
+    	function formatName(user){
+            return user.fname + " " + user.lname;
+        }
+        
+        function getName(user){ 
+            if(user){
+                return <h1>Hello, {formatName(user)}</h1>;
+            }
+            return <h1>Hello, Stranger</h1>;
+        }
+
+        var user = {
+            fname : "Nandish",
+            lname : "Patel"
+        };
+
+
+    	const element = getName(user);
+        
+        const div = <div width = "100px"/>;
+
+        const div2 = (
+          <div>
+            {element}
+            <h2>Good to see you here.</h2>
+          </div>
+        );
+
+    	ReactDOM.render(
+    	div2,
+    	document.getElementById("root")
+    	);
+    </script>
+</head>
+<body>
+	<div id="root"></div>
+</body>
+</html>

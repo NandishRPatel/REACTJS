@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>New step towards React js</title>
+	<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel">
+        function Welcome(props) {
+          return <h1>Hello, {props.name}!</h1>;
+        }
+        
+        function App(){
+          return (
+            <div>
+              <Welcome name = "Nandish" />
+              <Welcome name = "Sai" />
+              <Welcome name = "Sabka Malik Ek" />
+            </div>
+          );
+        }
+        ReactDOM.render(
+         <App/>,
+          document.getElementById("root")
+        );
+    
+    </script>
+</head>
+<body>
+	<div id="root"></div>
+</body>
+</html>
