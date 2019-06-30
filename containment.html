@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<title>New step towards React js</title>
+		<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+	    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+	    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+	    <style>
+	    	.FancyBorder {
+			  padding: 10px 10px;
+			  border: 10px solid;
+			}
+
+			.FancyBorder-red {
+			  border-color: red;
+			}
+
+			.Dialog-title {
+			  margin: 0;
+			  font-family: sans-serif;
+			}
+
+			.Dialog-msg {
+			  font-size: larger;
+			}
+	    </style>
+	    <script type="text/babel">
+	    	function FancyBorder(props){
+	    		return (
+	    			<div className = {'FancyBorder FancyBorder-' + props.color }>
+	    				{props.children}
+	    			</div>
+	    		);
+	    	}
+
+	    	function WelcomeDialog(){
+	    		return(
+	    			<FancyBorder color = "red">
+	    				<h1 className = "dialog-title">
+	    					Welcome
+	    				</h1>
+	    				<p className = "dialog-msg">
+	    					Thank you.	
+	    				</p>
+	    			</FancyBorder>
+	    		);
+	    	}
+	    	ReactDOM.render(<WelcomeDialog/>, document.getElementById("root"));
+	    </script>
+	</head>
+	<body>
+		<div id="root"></div>
+	</body>
+</html>
